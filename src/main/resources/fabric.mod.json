@@ -1,31 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "nyfsexperttweaks",
   "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Nyf's Expert Tweaks",
+  "description": "This mod adds Tweaks to Minecraft and Other Mods to make them more align with Expert Modpacks",
   "authors": [
-    "Me!"
+    "TheNyfaria"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.nyfaria.nyfsexperttweaks.NyfsExpertTweaks"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "nyfsexperttweaks.mixins.json"
   ],
-
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
