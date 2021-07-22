@@ -5,4 +5,4 @@
 Install mod and go! (Every Tweak is Config Toggleable)
 
 ## License
-MIT
+ARR
