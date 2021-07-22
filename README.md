@@ -1,9 +1,8 @@
-# Fabric Example Mod
+# Nyf's Expert Tweaks
 
 ## Setup
 
-For setup instructions please see the [fabric wiki page](https://fabricmc.net/wiki/tutorial:setup) that relates to the IDE that you are using.
+Install mod and go! (Every Tweak is Config Toggleable)
 
 ## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+MIT
