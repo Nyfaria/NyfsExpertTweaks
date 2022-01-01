@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "nyfsexperttweaks",
-  "version": "${version}",
+  "version": "0.0.3",
   "name": "Nyf's Expert Tweaks",
   "description": "This mod adds Tweaks to Minecraft and Other Mods to make them more align with Expert Modpacks",
   "authors": [
@@ -10,7 +10,7 @@
   "contact": {
     "sources": "https://github.com/Nyfaria/NyfsExpertTweaks"
   },
-  "license": "CC0-1.0",
+  "license": "ARR",
   "environment": "*",
   "entrypoints": {
     "main": [

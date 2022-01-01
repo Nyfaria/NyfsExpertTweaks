@@ -1,4 +1,4 @@
-package com.nyfaria.nyfsexperttweaks.tweaks;
+package com.nyfaria.nyfsexperttweaks.modtweaks;
 
 import mcp.mobius.waila.api.event.WailaRenderEvent;
 import net.minecraft.item.Item;
