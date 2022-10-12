@@ -1,4 +1,15 @@
 {
   "effect.nyfsexperttweaks.potion_delay": "Absorbing...",
-  "death.fell.accident.water": "%1$s thought the water would save them."
+  "death.fell.accident.water": "%1$s thought the water would save them.",
+  "block.nyfsexperttweaks.unknown": "UNKNOWN",
+
+
+  "nyfsexperttweaks.midnightconfig.WTIT_DISCOVERY":"WTHIT Tweak to only show if block has been inside the inventory before",
+  "nyfsexperttweaks.midnightconfig.POTION_ABSORB":"Do Potions take time to Absorb?",
+  "nyfsexperttweaks.midnightconfig.POTION_ABSORB_TIME":"If so, How long?",
+  "nyfsexperttweaks.midnightconfig.WATER_HURTS":"Does Water hurt?(Water will slow descent, and damage will be reduced not negated)",
+  "nyfsexperttweaks.midnightconfig.ENCHANT_FAIL":"Does Enchanting have a Chance to Fail?",
+  "nyfsexperttweaks.midnightconfig.ENCHANT_FAIL_CHANCE":"What is the chance per level the Enchant will fail?",
+  "nyfsexperttweaks.midnightconfig.ENCHANT_EXPLODE_FAIL":"Does Enchantment Fail Explode?",
+  "nyfsexperttweaks.midnightconfig.ENCHANT_EXPLODE_CHANCE":"If true, what percent chance is it to Explode?"
 }

@@ -48,12 +48,12 @@ public class EnchantingMixin extends ScreenHandler {
     @Inject(method = "method_17410", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/World;playSound(Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/sound/SoundEvent;Lnet/minecraft/sound/SoundCategory;FF)V"))
     public void enchantmentFail(ItemStack itemStack, int i, PlayerEntity player, int id, ItemStack itemStack2, World world, BlockPos pos, CallbackInfo cir) {
 
-        if (NyfsExpertTweaks.CONFIG.ENCHANT_FAIL && !player.world.isClient) {
+        if (NyfsExpertTweaksConfig.ENCHANT_FAIL && !player.world.isClient) {
             System.out.println(power);
-            if (random.nextInt(100) < (NyfsExpertTweaks.CONFIG.ENCHANT_FAIL_CHANCE * power)) {
+            if (random.nextInt(100) < (NyfsExpertTweaksConfig.ENCHANT_FAIL_CHANCE * power)) {
                 this.inventory.getStack(0).setCount(0);
                 this.inventory.setStack(0, ItemStack.EMPTY);
-                if (NyfsExpertTweaks.CONFIG.ENCHANT_EXPLODE_FAIL && random.nextInt(100) < NyfsExpertTweaks.CONFIG.ENCHANT_EXPLODE_CHANCE) {
+                if (NyfsExpertTweaksConfig.ENCHANT_EXPLODE_FAIL && random.nextInt(100) < NyfsExpertTweaksConfig.ENCHANT_EXPLODE_CHANCE) {
                     player.world.createExplosion(null, player.getX(), player.getBodyY(0.0625D), player.getZ(), 1.0F, Explosion.DestructionType.BREAK);
 
                 }

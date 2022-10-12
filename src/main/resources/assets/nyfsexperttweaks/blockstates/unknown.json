@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "nyfsexperttweaks:block/unknown"
+      },
+      {
+        "model": "nyfsexperttweaks:block/unknown",
+        "y": 90
+      },
+      {
+        "model": "nyfsexperttweaks:block/unknown",
+        "y": 180
+      },
+      {
+        "model": "nyfsexperttweaks:block/unknown",
+        "y": 270
+      }
+    ]
+  }
+}

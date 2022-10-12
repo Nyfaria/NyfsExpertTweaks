@@ -1,10 +1,10 @@
 plugins {
-	id 'fabric-loom' version '0.8-SNAPSHOT'
+	id 'fabric-loom' version '1.0-SNAPSHOT'
 	id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_16
-targetCompatibility = JavaVersion.VERSION_16
+sourceCompatibility = JavaVersion.VERSION_17
+targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
@@ -14,6 +14,15 @@ repositories {
 
 	maven { url "https://bai.jfrog.io/artifactory/maven" }
 	maven { url "https://jitpack.io" }
+	maven {
+		url "https://www.cursemaven.com"
+		content {
+			includeGroup "curse.maven"
+		}
+	}
+	maven {
+		url = "https://api.modrinth.com/maven"
+	}
 }
 
 dependencies {
@@ -22,14 +31,13 @@ dependencies {
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-	modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
-
-
-	modImplementation 'com.github.Draylar.omega-config:omega-config-base:1.0.4-beta'
-	include 'com.github.Draylar.omega-config:omega-config-base:1.0.4-beta'
+//	modCompileOnly "mcp.mobius.waila:wthit-api:fabric-${wthitVersion}"
+	modImplementation "curse.maven:jade-324717:3928578"
+	modImplementation "maven.modrinth:midnightlib:${project.midnightlib_version}"
+	include "maven.modrinth:midnightlib:${project.midnightlib_version}"
 
 	// run against the full jar
-	modRuntime "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
+//	modRuntime "mcp.mobius.waila:wthit:fabric-${wthitVersion}"
 }
 
 processResources {

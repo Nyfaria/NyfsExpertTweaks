@@ -1,12 +1,14 @@
 package com.nyfaria.nyfsexperttweaks.mixin;
 
 import com.nyfaria.nyfsexperttweaks.NyfsExpertTweaks;
+import com.nyfaria.nyfsexperttweaks.NyfsExpertTweaksConfig;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.tag.FluidTags;
 import net.minecraft.tag.Tag;
+import net.minecraft.tag.TagKey;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -26,11 +28,12 @@ public abstract class EntityMixin {
 
     @Shadow public abstract void extinguish();
 
-    @Shadow public abstract boolean updateMovementInFluid(Tag<Fluid> tag, double d);
+
+    @Shadow public abstract boolean updateMovementInFluid(TagKey<Fluid> tag, double speed);
 
     @Inject(at=@At(value="HEAD"), method = "checkWaterState", cancellable = true)
     public void makeWaterHurt(CallbackInfo ci){
-        if(NyfsExpertTweaks.CONFIG.WATER_HURTS) {
+        if(NyfsExpertTweaksConfig.WATER_HURTS) {
             if (this.updateMovementInFluid(FluidTags.WATER, 0.014D)) {
                 if ((Entity) (Object) this instanceof PlayerEntity) {
                     this.fallDistance = this.fallDistance * 0.8f;

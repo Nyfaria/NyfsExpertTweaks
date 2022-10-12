@@ -1,6 +1,7 @@
 package com.nyfaria.nyfsexperttweaks.mixin;
 
 import com.nyfaria.nyfsexperttweaks.NyfsExpertTweaks;
+import com.nyfaria.nyfsexperttweaks.NyfsExpertTweaksConfig;
 import com.nyfaria.nyfsexperttweaks.PotionDelayStatusEffect;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
@@ -36,7 +37,7 @@ public class PotionMixin extends Item {
      */
     @Inject(method = "finishUsing", at = @At("HEAD"), cancellable = true)
     public void potionDelay(ItemStack stack, World world, LivingEntity user, CallbackInfoReturnable<ItemStack> cir) {
-        if (NyfsExpertTweaks.CONFIG.POTION_ABSORB) {
+        if (NyfsExpertTweaksConfig.POTION_ABSORB) {
             PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity) user : null;
             if (playerEntity instanceof ServerPlayerEntity) {
                 Criteria.CONSUME_ITEM.trigger((ServerPlayerEntity) playerEntity, stack);
@@ -46,7 +47,7 @@ public class PotionMixin extends Item {
             PotionDelayStatusEffect statusEffect = NyfsExpertTweaks.POTION_DELAY;
             statusEffect.potionStack = stack;
 
-            StatusEffectInstance statusEffectInstance = new StatusEffectInstance(statusEffect, NyfsExpertTweaks.CONFIG.POTION_ABSORB_TIME);
+            StatusEffectInstance statusEffectInstance = new StatusEffectInstance(statusEffect, NyfsExpertTweaksConfig.POTION_ABSORB_TIME);
             user.addStatusEffect(statusEffectInstance);
 
             if (playerEntity != null) {
